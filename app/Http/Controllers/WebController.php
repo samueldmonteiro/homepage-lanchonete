@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dish;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
@@ -13,7 +14,9 @@ class WebController extends Controller
 
     public function menu()
     {
-        return view('menu');
+        return view('menu', [
+            'dishes' => Dish::orderBy('created_at', 'DESC')->get()
+        ]);
     }
 
     public function about()
