@@ -9,7 +9,6 @@ class Dish extends Model
 {
     use HasFactory;
 
-
     public function priceBrl(): string
     {
         return number_format($this->price, 2, ',', '.');

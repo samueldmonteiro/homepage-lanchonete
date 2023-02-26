@@ -10,7 +10,6 @@ class Cropper
 
     public static function thumb(string $image, int $width, ?int $heigth = null): ?string
     {
-
         $c = new CoffeeCropper(config('filesystems.disks.public.root') . "/" . static::$CACHE_PATH);
 
         $path = config('filesystems.disks.public.root') . "/{$image}";

@@ -11,7 +11,7 @@ with a side of fries and a whole lot of flavor.</p>
           <div class="u-repeater u-repeater-1">
             
             @foreach($dishes as $dish)
-              <div class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-6" data-image-width="996" data-image-height="389" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('{{Storage::url("$dish->cover")}}');">
+              <div class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-6" data-image-width="996" data-image-height="389" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('{{Storage::url(thumb($dish->cover, 700))}}');">
 
               <div class="u-container-layout u-similar-container u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-11">
                 <div class="u-align-center u-black u-container-style u-group u-opacity u-opacity-35 u-video-cover u-group-6">
